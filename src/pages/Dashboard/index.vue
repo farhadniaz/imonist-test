@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="home">Dashboard hom epage</div>
+    <div class="home">Dashboard home page</div>
   </Layout>
 </template>
 
