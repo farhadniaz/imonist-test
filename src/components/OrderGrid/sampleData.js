@@ -1,0 +1,25 @@
+const sample = {
+  subeIsmi: "lorem ipsm",
+  zRaporu: 100,
+  nakit: 100,
+  krediKart: 100,
+  yemekKarti: 100,
+  doviz: 100,
+  mobileOdemeDiger: 100,
+  masraf: 100,
+  fark: 100,
+};
+export default [
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+  sample,
+];
