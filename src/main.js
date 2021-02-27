@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import Pages from "./pages/index";
+import store from "@/store";
 
 import HighchartsVue from "highcharts-vue";
 
@@ -20,4 +21,5 @@ Vue.config.productionTip = false;
 new Vue({
   render: (h) => h(App),
   router: Pages,
+  store,
 }).$mount("#app");

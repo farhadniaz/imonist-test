@@ -22,7 +22,7 @@
           <span class="ound">Role</span>
         </b-nav-item>
         <b-nav-item>
-          <span class="">Cikish</span>
+          <span class="" @click="logout">Cikish</span>
         </b-nav-item>
       </b-nav>
     </div>
@@ -31,11 +31,19 @@
 
 <script>
 import Logo from "@/components/Logo";
+import router from "@/pages";
 
 export default {
   name: "Sidebar",
   components: {
     Logo,
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch("auth/logOut").then(() => {
+        router.push("/login");
+      });
+    },
   },
 };
 </script>

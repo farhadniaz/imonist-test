@@ -5,6 +5,8 @@ import DataTable from "@/pages/Dashboard/DataTable";
 import Login from "@/pages/Login";
 import PageNotFound from "@/pages/NotFound";
 
+import store from "@/store";
+
 Vue.use(Router);
 
 const router = new Router({
@@ -26,6 +28,12 @@ const router = new Router({
     },
     { path: "*", component: PageNotFound },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = !!store.state.auth.user;
+  if (to.name !== "Login" && !isAuthenticated) next({ name: "Login" });
+  else next();
 });
 
 export default router;
